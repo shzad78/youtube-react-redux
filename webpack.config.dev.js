@@ -1,6 +1,5 @@
 module.exports = {
   entry: [
-    'babel-polyfill', // used because of generator
     './src/js/index.jsx',
     './src/css/styles.scss'
   ],
@@ -19,7 +18,7 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['env', 'react'],
-            plugins: ["transform-object-rest-spread",]
+            plugins: ["transform-object-rest-spread", ]
           }
         }
       },
@@ -30,14 +29,14 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['env'],
-            plugins: ["transform-object-rest-spread",]
+            plugins: ["transform-object-rest-spread", ]
           }
         }
       },
       {
-        test: /\.css$/,
+        test:/\.css$/,
         use: [
-          'style-loader',
+          'style-loader', 
           {
             loader: 'css-loader',
             options: {
@@ -47,8 +46,8 @@ module.exports = {
         ]
       },
       {
-        test: /\.scss$/,
-        use: [
+        test:/\.scss$/,
+        use: [ 
           'style-loader',
           {
             loader: 'css-loader',
@@ -69,6 +68,6 @@ module.exports = {
 
   devtool: 'source-map',
 
-  resolve: { extensions: ['.js', '.jsx'] }
+  resolve: {extensions:['.js', '.jsx']}
 
 };
